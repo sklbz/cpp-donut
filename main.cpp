@@ -5,7 +5,7 @@
 int k;
 double sin(), cos();
 int main() {
-  float A = 0, B = 0, i, j, z[1760], mess_modif = 0.5f;
+  float A = 0, B = 0, i, j, z[1760], size = 2, t_modifier = 1.5;
   char b[1760];
   printf("\x1b[2J");
   while (1) {
@@ -15,9 +15,9 @@ int main() {
       for (i = 0; 6.28 > i; i += 0.02) {
         float sini = sin(i), cosj = cos(j), sinA = sin(A), sinj = sin(j),
               cosA = cos(A), cosj2 = cosj + 2,
-              mess = mess_modif / (sini * cosj2 * sinA + sinj * cosA + 5),
+              mess = size / (sini * cosj2 * sinA + sinj * cosA + 5),
               cosi = cos(i), cosB = cos(B), sinB = sin(B),
-              t = sini * cosj2 * cosA - sinj * sinA;
+              t = (sini * cosj2 * cosA - sinj * sinA) * t_modifier;
         int x = 40 + 30 * mess * (cosi * cosj2 * cosB - t * sinB),
             y = 12 + 15 * mess * (cosi * cosj2 * sinB + t * cosB),
             o = x + 80 * y,
