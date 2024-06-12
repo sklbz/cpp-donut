@@ -5,7 +5,7 @@
 int k;
 double sin(), cos();
 int main() {
-  float A = 0, B = 0, i, j, z[1760], size = 2, t_modifier = 1.5;
+  float A = 0, B = 0, i, j, z[1760], size = 2, t_modifier = 1;
   char b[1760];
   printf("\x1b[2J");
   while (1) {
